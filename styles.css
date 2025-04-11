@@ -1,8 +1,18 @@
+/* Global CSS variables */
+:root {
+  --dark-emerald-green: #07261B;
+  --light-emerald-green: #12402A;
+  --teal: #8ababd;
+  --sky-blue: #58a3bd;
+  --font-family: Verdana, Tahoma, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
+  font-family: var(--font-family);
 }
 
 body {
@@ -20,6 +30,22 @@ body {
 .sidebar {
   grid-area: sidebar;
   outline: auto red;
+
+  background-color: var(--light-emerald-green);
+  
+  display: flex;
+  flex-direction: column;
+  gap: calc(1vw + 20px);
+  padding: 15px;
+
+  font-size: calc(10px + .5vw);
+}
+
+.sidebar-nav,
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /* Header Section */

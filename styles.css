@@ -2,4 +2,34 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: rgb(63, 63, 63);
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "sidebar header"
+  "sidebar main-content";
+}
+
+/* Sidebar Section */
+.sidebar {
+  grid-area: sidebar;
+  outline: auto red;
+}
+
+/* Header Section */
+.header {
+  grid-area: header;
+  outline: auto green;
+}
+
+/* Main Content Section */
+.main-content {
+  grid-area: main-content;
+  outline: auto purple;
 }

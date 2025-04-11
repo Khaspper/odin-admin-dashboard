@@ -11,7 +11,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white;
   font-family: var(--font-family);
 }
 
@@ -29,7 +28,6 @@ body {
 /* Sidebar Section */
 .sidebar {
   grid-area: sidebar;
-  outline: auto red;
 
   background-color: var(--light-emerald-green);
   
@@ -51,7 +49,7 @@ body {
 /* Header Section */
 .header {
   grid-area: header;
-  outline: auto green;
+  background-color: var(--sky-blue);
 
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -69,6 +67,55 @@ body {
 
 /* Main Content Section */
 .main-content {
+  padding: 15px;
   grid-area: main-content;
-  outline: auto purple;
+  background-color: var(--teal);
+
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+/* Main Content > Main Left Side > Project Section  */
+
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px var(--light-emerald-green) solid;
+}
+
+/* Main Content > Main Right Side */
+.main-right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 15px;
+}
+
+.announcements-section,
+.trending-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.announcements-section > :nth-child(-n+2) {
+  border-bottom: solid .5px;
+}
+
+.announcements-section > :not(:first-child) {
+  margin-top: 30px;
+}
+
+.announcement-child:nth-child(-n+2) {
+  padding-bottom: 30px;
+}
+
+.profile {
+  display: flex;
 }

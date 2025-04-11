@@ -43,9 +43,39 @@ body {
 .sidebar-footer {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+
+  gap: 15px;
 }
 
+svg {
+  width: 30px;
+  fill: var(--teal);
+}
+
+.dashboard-logo,
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.dashboard-logo > p {
+  font-size: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  list-style: none;
+}
+
+a {
+  text-shadow: 0px 3px 2px #0b0b0b;
+  text-decoration: none;
+  color: white;
+}
 /* Header Section */
 .header {
   grid-area: header;
@@ -119,3 +149,4 @@ body {
 .profile {
   display: flex;
 }
+

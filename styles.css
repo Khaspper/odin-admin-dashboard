@@ -20,7 +20,7 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 5fr;
   grid-template-areas: 
   "sidebar header"
   "sidebar main-content";
@@ -52,6 +52,19 @@ body {
 .header {
   grid-area: header;
   outline: auto green;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.search,
+.profile-menu,
+.greeting,
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 /* Main Content Section */

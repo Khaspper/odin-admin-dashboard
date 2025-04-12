@@ -59,6 +59,8 @@ svg {
   fill: var(--teal);
 }
 
+
+
 .dashboard-logo,
 .nav-items {
   display: flex;
@@ -67,7 +69,7 @@ svg {
   color: white;
 }
 
-.dashboard-logo > p {
+.dashboard-logo > a {
   font-size: 20px;
 }
 
@@ -304,4 +306,17 @@ input[type=search] {
 
 input[type="search"]::-webkit-search-cancel-button {
   display: none;
+}
+
+/* General selectors */
+button:hover,
+svg:hover,
+.pfp-pic.small {
+  cursor: pointer;
+}
+
+a:active, 
+svg:active,
+button:active {
+  transform:scale(.9);
 }

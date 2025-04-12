@@ -1,10 +1,16 @@
 /* Global CSS variables */
 :root {
+  /* Colors */
   --dark-emerald-green: #07261B;
   --light-emerald-green: #12402A;
   --teal: #8ababd;
   --sky-blue: #58a3bd;
+
+  /* Texts */
   --font-family: Verdana, Tahoma, sans-serif;
+  --sub-text: 10px;
+  --header-text: 25px;
+  --section-text: 25px;
 }
 
 * {
@@ -120,8 +126,8 @@ input[type="search"] {
 }
 
 .pfp-pic.small {
-  width:50px;
-  height:50px;
+  width:45px;
+  height:45px;
 }
 
 .pfp-pic.big {
@@ -130,7 +136,6 @@ input[type="search"] {
 }
 
 .pfp-pic {
-  border:1px solid;
   border-radius:50%;
 }
 
@@ -161,19 +166,19 @@ input[type="search"] {
 
 /* Main Content Section */
 .main-content {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   grid-area: main-content;
   background-color: var(--teal);
 
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
 }
 
 /* Main Content > Main Left Side > Project Section  */
 
 .project-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(2, 1fr);
   gap: 20px 15px;
 }
@@ -182,11 +187,10 @@ input[type="search"] {
 .card {
   display: grid;
   grid-template-columns: 1rem 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   grid-template-areas: 
   "color-block text-block"
   "color-block card-buttons";
-  border: 2px var(--light-emerald-green) solid;
 
   background-color: white;
   gap: 15px;
@@ -197,18 +201,26 @@ input[type="search"] {
 .color-block {
   grid-area: color-block;
   background: linear-gradient(var(--teal), var(--dark-emerald-green));
-  border-radius: 12px 0 0 12px;
+  border-radius: 15px 0 0 15px;
+}
+
+.card-title {
+  font-size: var(--header-text);
 }
 
 .text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   grid-area: text-block;
-  padding-top: 10px;
+  padding: 10px;
 }
 
 .card-buttons {
-  justify-self: end;
-  align-self: end;
   grid-area: card-buttons;
+  justify-self: end;
+  align-self: center;
+  padding: 10px
 }
 
 /* Main Content > Main Right Side */
@@ -240,4 +252,33 @@ input[type="search"] {
 
 .profile {
   display: flex;
+}
+
+/* Trending Section */
+.trending-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bio {
+  font-size: var(--sub-text);
+}
+
+.section-text{
+  font-size: var(--section-text);
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }

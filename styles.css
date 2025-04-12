@@ -154,8 +154,9 @@ input[type="search"] {
   border: none;
   border-radius: 20px;
   background-color: var(--light-emerald-green);
-  padding: 10px 30px;
-  font-size: 16px;
+  height: max(2.5vw, 30px);
+  width: max(6vw, 70px);
+  font-size: .8em;
 }
 
 /* Main Content Section */
@@ -172,14 +173,42 @@ input[type="search"] {
 
 .project-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: repeat(2, 1fr);
+  gap: 20px 15px;
 }
 
+/* Card section */
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1rem 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "color-block text-block"
+  "color-block card-buttons";
   border: 2px var(--light-emerald-green) solid;
+
+  background-color: white;
+  gap: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 3px 1px black;
+} 
+
+.color-block {
+  grid-area: color-block;
+  background: linear-gradient(var(--teal), var(--dark-emerald-green));
+  border-radius: 12px 0 0 12px;
+}
+
+.text-block {
+  grid-area: text-block;
+  padding-top: 10px;
+}
+
+.card-buttons {
+  justify-self: end;
+  align-self: end;
+  grid-area: card-buttons;
 }
 
 /* Main Content > Main Right Side */
@@ -212,4 +241,3 @@ input[type="search"] {
 .profile {
   display: flex;
 }
-

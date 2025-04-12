@@ -4,11 +4,12 @@ This project is part of The Odin Project's Intermediate HTML and CSS course. It 
 
 ## Live Demo
 
-[[View Live Demo]([https://yourusername.github.io/admin-dashboard/](https://khaspper.github.io/odin-admin-dashboard/))]
+[View Live Demo](https://khaspper.github.io/odin-admin-dashboard/)
 
 ## Screenshot
 
-![Admin Dashboard Screenshot](./path-to-screenshot.png)
+![image](https://github.com/user-attachments/assets/059b41e9-2daf-4b22-9cc5-199a0392cb71)
+
 
 ## Features
 
